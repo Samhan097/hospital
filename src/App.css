@@ -1,38 +1,478 @@
-.App {
+/* css for ButtonAppBar */
+.app-bar {
+  background-color: rgba(0, 0, 0, 0.7) !important; /* Black background with 0.7 opacity */
+  position: sticky;
+  top: 0;
+  box-shadow: none;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo img {
+  width: 18px; /* Adjust the width to make the logo smaller */
+  height: 18px; /* Adjust the height proportionally */
+  margin-right: 10px;
+}
+
+.logo-text {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff; /* White text color */
+}
+
+.phone-number,
+.contact-button,
+.menu-icon {
+  color: #fff; /* White text color */
+  left: auto; /* Remove the left property */
+}
+
+.phone-number {
+  margin-left: 10px; /* Adjust margin as needed */
+}
+
+/* End of Button AppBar Style */
+
+
+/* CSS for ImageSlider */
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.image {
+  filter: brightness(80%);
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+
+/* Center the content within the image */
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 2%; /* Adjust the left gap as needed */
+  transform: translateY(-50%);
+  text-align: left; /* Adjust text alignment as needed */
+  color: #fff;
+  z-index: 1;
+  max-width: 80%; /* Limit text width to avoid overflowing */
+}
+
+/* Styles for text content */
+.slide-title {
+  font-size: 60px;
+  margin-bottom: 10px; /* Add spacing between elements */
+}
+
+.slide-about,
+.slide-text {
+  font-size: 20px;
+  margin-bottom: 10px; /* Add spacing between elements */
+}
+
+/* Pagination Dot Style */
+.carousel_pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.pagination_dot {
+  height: 5px;
+  width: 5px;
+  background-color: #ffffff;
+  border-radius: 100%;
+  display: inline-block;
+  margin-left: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* .pagination_dot:hover {
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+  border: 2px solid #3498db;
+  border-radius: 50%;
+} */
+
+.pagination_dot-active {
+  background-color: rgb(14, 103, 29);
+}
+/* End of Pagination Dot style */
+
+/* About css */
+.about-section {
+  background: #ffffff;
+  z-index: 3;
+  padding-left: 2%;
+  padding-top: 20px; /* Add top spacing */
+  padding-bottom: 20px; /* Add bottom spacing */
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+}
+
+/* Add space around the heading and text */
+.about-heading {
+  margin-bottom: 50px !important; /* Adjust as needed */
+}
+
+.about-text {
+margin-bottom: 20px !important; /* Adjust as needed */
+}
+
+/* Add space between buttons */
+.about-button1,
+.about-button2 {
+  display: flex;
+  gap: 10px; /* Adjust the gap as needed */
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  border-radius: 50px; /* Rounded corners */
+  cursor: pointer;
+  margin-top: 20px !important; /* Add top spacing */
+  margin-bottom: 40px !important; /* Add bottom spacing */
+}
+.divider {
+      border: none;
+      border-top: 2px solid #c0bebe; /* Adjust the color and thickness as needed */
+      margin: 0; /* Add margin for spacing */
+      width: 95%;
+    }
+.about-image {
+  max-width: 80%;
+  height: auto; /* Adjust height to maintain aspect ratio */
+}
+
+/* OurServices css */
+
+.our-services {
+  background-color: #ffffff;
+  margin-top: 80px;
+}
+
+.service-button1{
+  margin-bottom: 20px !important;
+}
+
+.service-paragraph{
+  margin-bottom: 60px !important;
+}
+
+.service {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.service-number {
+  width: 40px ;
+  height: 20px;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 40px;
+  border: 2px solid black;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+}
+
+
+.service-text {
+  flex: 1;
+  text-align: right;
+  white-space: nowrap; /* Prevent text from wrapping */
+  text-overflow: ellipsis;
+  
+}
+
+.service-divider{
+  border: none;
+      border-top: 2px solid #8a8989; /* Adjust the color and thickness as needed */
+      margin: 0; /* Add margin for spacing */
+      width: 100%;
+}
+
+
+.service-image {
+  background-image: url('../public/service.png');
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+ position: absolute;
+ bottom: -165%;
+ right: 10%;
+  cursor: pointer;
+
+}
+
+.service-button2{
+  margin-top: 40px !important;
+}
+/* End of OurServices css */
+
+/* Signup css */
+.signup-section {
+  background: #ffffff;
+  z-index: 3;
+  padding-left: 2%;
+  padding-top: 20px; /* Add top spacing */
+  padding-bottom: 20px; /* Add bottom spacing */
+}
+
+.signup-content {
+  display: flex;
+  align-items: center;
+}
+
+/* Add space around the heading and text */
+.signup-heading {
+  margin-bottom: 50px !important; /* Adjust as needed */
+}
+
+.signup-text {
+margin-bottom: 20px !important;
+margin-left: 80px !important; 
+margin-right: 80px !important;
+}
+
+/* Add space between buttons */
+.signup-button1,
+.signup-button2 {
+  display: flex;
+  gap: 10px; /* Adjust the gap as needed */
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  border-radius: 50px; /* Rounded corners */
+  cursor: pointer;
+  margin-top: 20px !important; /* Add top spacing */
+  margin-bottom: 40px !important; /* Add bottom spacing */
+}
+
+.signup-image {
+  margin-top: -20%;
+  max-width: 80%;
+  height: auto; /* Adjust height to maintain aspect ratio */
+}
+
+.clients-text{
+  color: rgb(64, 63, 63);
+  margin-bottom: 50px !important;
+}
+
+/* Logo slider container style */
+.logo-slider-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Logo slider style with animation */
+.logo-slider {
+  display: flex;
+  width: 200%; /* Adjust the width based on the number of logos you have (9 logos => 900%) */
+  animation: slide 10s linear infinite; /* Adjust the animation duration as needed */
+}
+
+/* Logo item style */
+.logo-item {
+  flex: 0 0 auto;
+  width: calc(100% / 9); /* Adjust the width based on the number of logos you have */
+}
+
+/* Keyframes animation for sliding */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); /* Move by the full width to slide logos continuously */
+  }
+}
+
+/* Logo slider container style for the second slider */
+.logo-slider2-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Logo slider style with animation for the second slider */
+.logo-slider2 {
+  display: flex;
+  width: 200%; /* Adjust the width based on the number of logos you have (10 logos => 200%) */
+  animation: slide2 10s linear infinite; /* Adjust the animation duration as needed */
+}
+
+/* Logo item style for the second slider */
+.logo-item2 {
+  flex: 0 0 calc(10% - 20px); /* Adjust the width based on the number of logos you have */
+  width: calc(10% - 20px); /* Adjust the width based on the number of logos you have */
+  margin-right: 10px; /* Adjust the spacing between logos */
+}
+
+/* Keyframes animation for sliding for the second slider */
+/* Keyframes animation for sliding for the second slider */
+@keyframes slide2 {
+  0% {
+    transform: translateX(-100%); /* Move from left to right */
+  }
+  100% {
+    transform: translateX(0); /* Move back to the original position */
+  }
+}
+
+
+.blog-divider{
+  border: none;
+      border-top: 2px solid #c0bebe; /* Adjust the color and thickness as needed */
+      margin: 0; /* Add margin for spacing */
+      width: 94%;
+      margin-left: 2%;
+    }
+/* Define the styles for the footer */
+.footer {
+  background-color: #03034dcc;
+  color: white;
+  padding: 20px 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Create the animation for moving text */
+.moving-text-container {
+  white-space: nowrap;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.moving-text {
+  animation: moveText 10s linear infinite;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
+/* Style the text row */
+.text-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; /* Adjust the gap between text elements */
+  margin-bottom: 80px;
+}
 
-.App-header {
-  background-color: #282c34;
+/* Style the text elements */
+.footer-text {
+  text-decoration: none !important;
+  font-size: 14px;
+}
+.footer-divider{
+  border: none;
+      border-top: 2px solid #c0bebe; /* Adjust the color and thickness as needed */
+      margin: 0; /* Add margin for spacing */
+      width: 94%;
+      margin-left: 2%;
+    }
+
+.copyright-footer {
+  color: white;
+  padding: 20px 60px 20px 40px;
+  display: flex;
+  justify-content: space-between; /* This separates the left and right sides */
+  align-items: center;
+}
+/* Style the copyright text */
+.copyright {
+  font-size: 12px;
+}
+
+/* Style the right-side text elements */
+.footer-right {
+  display: flex;
+  gap: 20px; /* Adjust the gap between text elements */
+}
+
+/* Style the text elements */
+.footer-text {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* Style the text elements on hover (optional) */
+.footer-text:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* src/components/ImagePage.css */
+.image-page {
+  position: relative;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-image: url('/public/hero_img1.png'); /* Replace with your image path */
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.App-link {
-  color: #61dafb;
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(35, 38, 133, 0.9); /* Blue transparent overlay */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content-container {
+  position: relative;
+  z-index: 1; /* Place content above the overlay */
+}
+
+.content {
+  padding: 20px;
+  background-color: white;
+}
+.image-slider-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 99%;
+  background-color: rgba(9, 79, 177, 0.6); /* Blue transparent overlay */
+}
+.new-patients{
+  position: absolute;
+  top: 80px;
+  left: 600px;
+  width: 130px;
+  height: 130px;
+  z-index: -1;
 }
