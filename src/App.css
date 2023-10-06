@@ -1,14 +1,24 @@
-/* css for ButtonAppBar */
-.app-bar {
-  background-color: rgba(0, 0, 0, 0.7) !important; /* Black background with 0.7 opacity */
-  position: sticky;
-  top: 0;
-  box-shadow: none;
-}
 
-.toolbar {
-  display: flex;
-  align-items: center;
+/* CSS for ButtonAppBar */
+body{
+  overflow-x:hidden;
+  font-family: 'Chivo', sans-serif;
+}
+.app{
+  font-family: 'Chivo', sans-serif;
+  
+}
+h1,p{
+  font-family: 'Chivo', sans-serif;
+}
+/* Common styles for both desktop and mobile */
+.appbar {
+  background-color: rgba(0, 0, 0, 0.5); /* Use rgba to set the background color with opacity */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100; /* Make sure it appears above other content */
 }
 
 .logo {
@@ -25,25 +35,23 @@
 
 .logo-text {
   text-transform: uppercase;
+  font-family: 'Chivo', sans-serif !important;
   font-weight: bold;
   color: #fff; /* White text color */
 }
+.phone-number{
+  font-family: 'Chivo', sans-serif !important;
+}
+.contact-button{
+  font-family: 'Chivo', sans-serif !important;
 
-.phone-number,
-.contact-button,
-.menu-icon {
-  color: #fff; /* White text color */
-  left: auto; /* Remove the left property */
 }
 
-.phone-number {
-  margin-left: 10px; /* Adjust margin as needed */
-}
-
-/* End of Button AppBar Style */
-
+/* End of ButtonAppBar Style */
 
 /* CSS for ImageSlider */
+/* Base styles */
+/* Base styles */
 .slider {
   position: relative;
   width: 100%;
@@ -54,8 +62,21 @@
 .image {
   filter: brightness(80%);
   width: 100%;
-  height: 600px;
-  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.image-slider-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100vh;
+  background-color: rgba(9, 79, 177, 0.6); /* Blue transparent overlay */
 }
 
 /* Center the content within the image */
@@ -102,82 +123,122 @@
   z-index: 2;
 }
 
-/* .pagination_dot:hover {
-  width: 8px;
-  height: 8px;
-  background-color: transparent;
-  border: 2px solid #3498db;
-  border-radius: 50%;
-} */
-
 .pagination_dot-active {
   background-color: rgb(14, 103, 29);
 }
+
+@media screen and (max-width: 1180px) {
+  /* Adjust styles for screens up to 480px wide (typical mobile size) */
+  .slide-content {
+    left: 5%; /* Increase left gap for smaller screens */
+  }
+  
+  /* Override font size for text content to match the desktop version */
+  .slide-title {
+    font-size: 20px; /* Restore font size for the title on smaller screens */
+    width: 100%;
+  }
+
+  .slide-about,
+  .slide-text {
+    font-size: 12px; /* Restore font size for other text content on smaller screens */
+    width: 100%;
+
+  }
+  .image-slider-overlay{
+    width: 100%;
+  }
+}
+
 /* End of Pagination Dot style */
 
 /* About css */
+/* Base styles */
 .about-section {
   background: #ffffff;
   z-index: 3;
   padding-left: 2%;
-  padding-top: 20px; /* Add top spacing */
-  padding-bottom: 20px; /* Add bottom spacing */
+  padding-top: 100px;
+  padding-bottom: 20px;
 }
 
 .about-content {
   display: flex;
   align-items: center;
+  flex-direction: column; /* Adjust for better stacking on small screens */
+  text-align: center; /* Center align text content on small screens */
+}
+
+/* Make the left side content left-aligned */
+.about-content-left {
+  text-align: left;
 }
 
 /* Add space around the heading and text */
 .about-heading {
-  margin-bottom: 50px !important; /* Adjust as needed */
+  margin-bottom: 20px !important;
+  font-size: 60px; /* Adjust font size for smaller screens */
 }
 
 .about-text {
-margin-bottom: 20px !important; /* Adjust as needed */
+  margin-bottom: 20px !important;
+  font-size: 16px; /* Adjust font size for smaller screens */
 }
 
 /* Add space between buttons */
 .about-button1,
 .about-button2 {
   display: flex;
-  gap: 10px; /* Adjust the gap as needed */
-  padding: 10px 20px; /* Adjust padding as needed */
-  background-color: #007bff; /* Button background color */
-  color: #fff; /* Button text color */
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
   border: none;
-  border-radius: 50px; /* Rounded corners */
+  border-radius: 50px;
   cursor: pointer;
-  margin-top: 20px !important; /* Add top spacing */
-  margin-bottom: 40px !important; /* Add bottom spacing */
+  margin-top: 20px !important;
+  margin-bottom: 40px !important;
+  font-size: 16px; /* Adjust font size for smaller screens */
 }
-.divider {
-      border: none;
-      border-top: 2px solid #c0bebe; /* Adjust the color and thickness as needed */
-      margin: 0; /* Add margin for spacing */
-      width: 95%;
-    }
-.about-image {
-  max-width: 80%;
-  height: auto; /* Adjust height to maintain aspect ratio */
+
+/* Media Queries for Smaller Screens (e.g., Mobile) */
+@media screen and (max-width: 1180px) {
+  .about-heading {
+    font-size: 24px;
+  }
+
+  .about-text {
+    font-size: 12px;
+  }
+
+  .about-button1,
+  .about-button2 {
+    font-size: 10px;
+  }
+  .about-content-left {
+    padding-left: 5%; /* Adjust left padding for small screens */
+  }
+  .about-image{
+    width: 100%;
+  }
+  .divider{
+    width: 98%;
+  }
 }
 
 /* OurServices css */
 
 .our-services {
   background-color: #ffffff;
-  margin-top: 80px;
+  margin-top: 100px;
 }
 
 .service-button1{
   margin-bottom: 20px !important;
 }
 
-.service-paragraph{
-  margin-bottom: 60px !important;
-}
 
+/* Default styles for all screen sizes */
 .service {
   display: flex;
   align-items: center;
@@ -185,7 +246,7 @@ margin-bottom: 20px !important; /* Adjust as needed */
 }
 
 .service-number {
-  width: 40px ;
+  width: 40px;
   height: 20px;
   background-color: #ffffff;
   color: #000000;
@@ -198,38 +259,63 @@ margin-bottom: 20px !important; /* Adjust as needed */
   margin-right: 16px;
 }
 
-
 .service-text {
   flex: 1;
   text-align: right;
-  white-space: nowrap; /* Prevent text from wrapping */
+  font-size: 40px;
+  white-space: nowrap;
   text-overflow: ellipsis;
-  
 }
 
-.service-divider{
+.service-divider {
   border: none;
-      border-top: 2px solid #8a8989; /* Adjust the color and thickness as needed */
-      margin: 0; /* Add margin for spacing */
-      width: 100%;
+  border-top: 2px solid #8a8989;
+  margin: 0;
+  width: 100%;
 }
 
+.hover-image {
+  display: none;
+}
 
-.service-image {
-  background-image: url('../public/service.png');
+.service:hover .hover-image {
+  display: block;
   background-size: cover;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
- position: absolute;
- bottom: -165%;
- right: 10%;
+  position: absolute;
+  right: 20%;
   cursor: pointer;
+}
 
+.circular-image {
+  border-radius: 100%;
+  width: 220px;
+  height: 220px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1100px) {
+  /* Styles for screens with a maximum width of 600px (e.g., mobile devices) */
+  .service {
+    flex-direction: row; /* Stack items vertically */
+    align-items: flex-start;
+    align-items: center;
+  }
+
+  .service-number {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+
+  .service-text {
+    text-align: left;
+    font-size: 18px;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .service-button2{
-  margin-top: 40px !important;
+  margin-top: 80px !important;
 }
 /* End of OurServices css */
 
@@ -238,8 +324,8 @@ margin-bottom: 20px !important; /* Adjust as needed */
   background: #ffffff;
   z-index: 3;
   padding-left: 2%;
-  padding-top: 20px; /* Add top spacing */
-  padding-bottom: 20px; /* Add bottom spacing */
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .signup-content {
@@ -253,9 +339,9 @@ margin-bottom: 20px !important; /* Adjust as needed */
 }
 
 .signup-text {
-margin-bottom: 20px !important;
-margin-left: 80px !important; 
-margin-right: 80px !important;
+  margin-bottom: 20px !important;
+  margin-left: 80px !important;
+  margin-right: 80px !important;
 }
 
 /* Add space between buttons */
@@ -264,24 +350,61 @@ margin-right: 80px !important;
   display: flex;
   gap: 10px; /* Adjust the gap as needed */
   padding: 10px 20px; /* Adjust padding as needed */
-  background-color: #007bff; /* Button background color */
-  color: #fff; /* Button text color */
+  background-color: #007bff;
+  color: #fff;
   border: none;
-  border-radius: 50px; /* Rounded corners */
+  border-radius: 50px;
   cursor: pointer;
-  margin-top: 20px !important; /* Add top spacing */
-  margin-bottom: 40px !important; /* Add bottom spacing */
+  margin-top: 20px !important;
+  margin-bottom: 40px !important;
 }
 
 .signup-image {
   margin-top: -20%;
   max-width: 80%;
-  height: auto; /* Adjust height to maintain aspect ratio */
+  height: auto;
 }
 
+/* Media queries for responsiveness */
+@media (max-width: 1100px) {
+  .signup-content {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center content on smaller screens */
+    text-align: left; /* Center text on smaller screens */
+    margin-left: 5% !important;
+  }
+
+
+  .signup-text {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+  }
+
+  .signup-button2 {
+    margin-bottom: 60% !important; /* Adjust bottom spacing for better alignment */
+  }
+}
+
+/* End of signup */
+
+/* css for clients */
 .clients-text{
-  color: rgb(64, 63, 63);
+  color: #121212;
+  font-size: 60px;
   margin-bottom: 50px !important;
+}
+@media (max-width: 1100px){
+  .clients-quote{
+    font-size: 14px;
+  }
+  .clients-text{
+  color: #121212;
+  margin-left: 5% !important;
+  font-size: 30px;
+  }
+  .avatar-content{
+    margin-left: 5%;
+  }
 }
 
 /* Logo slider container style */
@@ -312,6 +435,8 @@ margin-right: 80px !important;
     transform: translateX(-100%); /* Move by the full width to slide logos continuously */
   }
 }
+
+
 
 /* Logo slider container style for the second slider */
 .logo-slider2-container {
@@ -344,7 +469,33 @@ margin-right: 80px !important;
   }
 }
 
+/* Media queries for responsiveness */
+@media (max-width: 1100px) {
+  /* Adjust the width and spacing for smaller screens */
+  .logo-slider,.logo-slider2 {
+    width: 900%; /* Adjust the width for smaller screens (3 logos in a row) */
+  }
+  
+  .logo-item,.logo-item2 {
+    width: calc(100% / 9); /* Adjust the width for smaller screens (3 logos in a row) */
+    margin-right: 5px; /* Adjust the spacing between logos for smaller screens */
+  }
+}
+/* End of clients css */
 
+/* css for blog */
+.blog-section {
+  background: #ffffff;
+  z-index: 3;
+  padding-left: 2%;
+  padding-bottom: 20px; /* Add bottom spacing */
+}
+.blogs-text{
+  font-size: 60px;
+}
+.blog-heading{
+  font-size: 40px;
+}
 .blog-divider{
   border: none;
       border-top: 2px solid #c0bebe; /* Adjust the color and thickness as needed */
@@ -352,6 +503,123 @@ margin-right: 80px !important;
       width: 94%;
       margin-left: 2%;
     }
+@media(max-width:1100px){
+  .blog-section{
+    margin-left: 5% !important;
+  }
+  .blogs-text{
+    margin-left: 5% !important;
+    font-size: 36px;
+    margin-bottom: -20%;
+  } 
+  .blog-divider{
+    width: 92%;
+  }
+  .blog-img{
+    width: 90%;
+  }
+  .blog-heading{
+    font-size: 24px;
+    width: 90%;
+    margin-bottom: -30%;
+
+  }
+  .chevron-icon {
+    text-align: right;
+    margin-top: -70% !important;
+  }
+}
+
+/* End of blog section */
+
+/* css for FAQ */
+.our-faq {
+  background-color: #ffffff;
+  margin-top: 100px;
+}
+
+.faq-button1{
+  margin-bottom: 20px !important;
+}
+
+
+/* Default styles for all screen sizes */
+.faq {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.faq-number {
+  width: 40px;
+  height: 20px;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 40px;
+  border: 2px solid black;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+}
+
+.faq-text {
+  flex: 1;
+  text-align: right;
+  font-size: 40px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.faq-text-1{
+  font-size: 40px;
+}
+
+.faq-divider {
+  border: none;
+  border-top: 2px solid #8a8989;
+  margin: 0;
+  width: 100%;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1100px) {
+  /* Styles for screens with a maximum width of 600px (e.g., mobile devices) */
+  p{
+    font-size: 10px;
+  }
+  .faq {
+    flex-direction: row; /* Stack items vertically */
+    align-items: flex-start;
+    align-items: center;
+  }
+
+  .faq-number {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+
+  .faq-text {
+    text-align: left;
+    font-size: 14px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .faq-text-1{
+    font-size: 14px;
+    width: 80%; 
+  }
+  .faq-1{
+    width: 80%;
+  }
+}
+
+.faq-button2{
+  margin-top: 80px !important;
+}
+
+/* End of faq css */
+
 /* Define the styles for the footer */
 .footer {
   background-color: #03034dcc;
@@ -367,6 +635,7 @@ margin-right: 80px !important;
 
 .moving-text {
   animation: moveText 10s linear infinite;
+  font-size: 80px;
 }
 
 @keyframes moveText {
@@ -387,25 +656,42 @@ margin-right: 80px !important;
 }
 
 /* Style the text elements */
-.footer-text {
-  text-decoration: none !important;
-  font-size: 14px;
+/* Default styles for all screen sizes */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 600px;
 }
-.footer-divider{
+
+.footer-logo img {
+  width: 18px; /* Adjust the width to make the logo smaller */
+  height: 18px; /* Adjust the height proportionally */
+  margin-right: 10px;
+}
+
+.footer-logo-text {
+  text-transform: uppercase;
+  margin-top: 1%;
+  font-family: 'Chivo', sans-serif !important;
+  color: #fff; /* White text color */
+}
+.footer-divider {
   border: none;
-      border-top: 2px solid #c0bebe; /* Adjust the color and thickness as needed */
-      margin: 0; /* Add margin for spacing */
-      width: 94%;
-      margin-left: 2%;
-    }
+  border-top: 2px solid #c0bebe;
+  margin: 0;
+  width: 94%;
+  margin-left: 2%;
+}
 
 .copyright-footer {
   color: white;
   padding: 20px 60px 20px 40px;
   display: flex;
-  justify-content: space-between; /* This separates the left and right sides */
+  justify-content: space-between;
   align-items: center;
 }
+
 /* Style the copyright text */
 .copyright {
   font-size: 12px;
@@ -414,14 +700,14 @@ margin-right: 80px !important;
 /* Style the right-side text elements */
 .footer-right {
   display: flex;
-  gap: 20px; /* Adjust the gap between text elements */
+  gap: 20px;
 }
 
 /* Style the text elements */
 .footer-text {
   color: white;
   font-size: 14px;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 /* Style the text elements on hover (optional) */
@@ -430,14 +716,37 @@ margin-right: 80px !important;
   cursor: pointer;
 }
 
-/* src/components/ImagePage.css */
+
+/* Media queries for responsiveness */
+@media (max-width: 1100px) {
+  .moving-text {
+    animation: moveText 3s linear infinite;
+    font-size: 30px;
+    overflow-x:visible;
+  }
+  .copyright-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-right {
+    margin-top: 10px;
+  }
+ .footer-logo{
+  margin-left: 30%;
+ }
+  
+}
+/* End of footer css */
+
+/* css for mainmenu */
 .image-page {
   position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('/public/hero_img1.png'); /* Replace with your image path */
+  background-image: url('/public/home/hero_img1.png'); /* Replace with your image path */
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -460,19 +769,46 @@ margin-right: 80px !important;
   padding: 20px;
   background-color: white;
 }
-.image-slider-overlay{
+
+.image-container{
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 40%;
-  height: 99%;
-  background-color: rgba(9, 79, 177, 0.6); /* Blue transparent overlay */
-}
-.new-patients{
-  position: absolute;
-  top: 80px;
-  left: 600px;
+  display: none;
+  top: 10%;
+  left: 65%;
   width: 130px;
   height: 130px;
   z-index: -1;
 }
+.button-container {
+  display: inline-block;
+}
+.button-container:hover + .image-container,
+.image-container:hover {
+  display: block;
+}
+
+/* Media queries for small screens */
+@media (max-width: 1100px) {
+  .image-page {
+width: 100%;
+height: 100%;   
+  }
+
+  .image-overlay {
+    background-color: rgba(35, 38, 133, 0.7); /* Adjust overlay opacity */
+  }
+  .btn-mainmenu{
+    font-size: 20px !important;
+  }
+  .new-patients {
+    top: 20px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .content {
+    padding: 10px; /* Reduce padding for small screens */
+  }
+}
+/* End of Mainmenu css */
