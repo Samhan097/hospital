@@ -12,9 +12,11 @@ export default function Footer() {
           </div>
       <div className="moving-text-container">
       <h3 className='moving-text' style={{marginBottom:60}}>
-      Start a Joint Injections . Immunizations . Online Services
+      . Start a Joint Injections . Immunizations . Online Services
       </h3>
-        
+      <h3 className='moving-text' style={{marginBottom:60}}>
+      . Start a Joint Injections . Immunizations . Online Services
+      </h3>
       </div>
       <div className="text-row" >
         <p className="footer-text">Home </p>

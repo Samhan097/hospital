@@ -7,7 +7,8 @@ const ServiceImageSlider = () => {
     '/service/service-1.png', 
     '/service/service-2.png', 
     '/service/service-3.png', 
-    '/service/service-4.png',     
+    '/service/service-4.png',
+         
   ];
 
   return (

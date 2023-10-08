@@ -2,8 +2,9 @@ import React from 'react';
 import Button from '@mui/material/Button';
 import "../../App.css";
 import { Typography } from '@mui/material';
-import { ChevronRight } from '@mui/icons-material';
 import Faqs from './Faqs';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function FAQ() {
   return (
@@ -17,7 +18,7 @@ export default function FAQ() {
         </Typography>
       </div>
       <Faqs />
-      <Button variant="outlined" style={{ borderRadius: '50px', color:'black',border:'1px solid black' ,marginBottom:30}} className="faq-button2" endIcon={<ChevronRight />}>
+      <Button variant="outlined" style={{ borderRadius: '50px', color:'black',border:'1px solid black' ,marginBottom:30}} className="faq-button2" endIcon={<FontAwesomeIcon icon={faChevronRight} style={{fontSize:15}} />}>
 view all faq
              </Button>
         <div className="faq-image" ></div>

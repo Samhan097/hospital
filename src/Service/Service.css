@@ -107,6 +107,14 @@
     margin-top: 20% !important;
     margin-left: 15% !important;
 }
+.getintouch-divider{
+  border: none;
+  border-top: 2px solid #c0bebe;
+  margin: 0;
+  width: 94%;
+  margin-left: 2%;
+
+}
 @media(max-width:1100px){
     
     .service-hero-heading-1{

@@ -15,19 +15,19 @@ export default function OurServices() {
       <Button
         variant="outlined"
         color="primary"
-        style={{ borderRadius: '50px', fontFamily: 'Chivo' }}
+        style={{ borderRadius: '50px' }}
         className="service-button1"
       >
         Our Services
       </Button>
     </Link>
         
-        <Typography variant='h5' style={{marginBottom:100,marginTop:30,fontFamily:'Chivo'}}>
+        <Typography variant='h5' style={{marginBottom:100,marginTop:30}}>
         our comprehensive medical services of highly skilled and compassionate medical professionals offers a wide range of services, including preventive care, diagnostics. We are committed to providing cutting-edge medical technologies and evidence-based practices to ensure the best possible outcomes for our patients.
         </Typography>
       </div>
       <Service  />
-      <Button variant="outlined" style={{ borderRadius: '50px', color:'black',border:'1px solid black',fontFamily:'Chivo' }} className="service-button2" endIcon={<ArrowOutwardIcon />}>
+      <Button variant="outlined" style={{ borderRadius: '50px', color:'black',border:'1px solid black' }} className="service-button2" endIcon={<ArrowOutwardIcon />}>
 view all service
              </Button>
 

@@ -14,7 +14,7 @@ export default function OurBlogs() {
         <Grid
           item
           xs={12}
-          md={3}
+          md={4}
           className="blogs-content"
           style={{ marginLeft: 30 }}
         >
@@ -43,23 +43,26 @@ export default function OurBlogs() {
             style={{ marginTop: 100 }}
           >
             Sharing is caring so we make time to write about our experience.
-          </h2>
+          </h2> 
         </Grid>
       </Grid>
       {/* Add your blog content here */} 
       <Blog
         imageSrc="home/blog-1.png"
         title="First large U.S. clinical trial of finds the smoking cessation medication"
+        description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, eveniet consequuntur. Velit nemo odit distinctio quis modi aperiam laudantium reiciendis, quas officia id unde. Quo cumque fuga architecto minima iusto."
         date="August 22, 2023"
       />
       <Blog
         imageSrc="home/blog-2.png"
         title="Mass General Researchers Find Targeting Immune"
+        description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, eveniet consequuntur. Velit nemo odit distinctio quis modi aperiam laudantium reiciendis, quas officia id unde. Quo cumque fuga architecto minima iusto."
         date="September 5, 2023"
       />
       <Blog
         imageSrc="home/blog-3.png"
         title="Study Sheds Light on How Breast Cancer Cells Evade Immune"
+        description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, eveniet consequuntur. Velit nemo odit distinctio quis modi aperiam laudantium reiciendis, quas officia id unde. Quo cumque fuga architecto minima iusto."
         date="September 25, 2023"
       />
       <Button
@@ -69,11 +72,8 @@ export default function OurBlogs() {
           borderRadius: "50px",
           color: "black",
           border: "1px solid black",
-          marginLeft: 660,
-          marginTop: 70,
-          marginBottom: 100,
         }}
-        className="blogs-button"
+        className="blogs-button1"
         endIcon=<ArrowOutward />
       >
         view all posts

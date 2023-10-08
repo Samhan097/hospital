@@ -3,7 +3,8 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import '../App.css';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function About() {
   return (
@@ -15,16 +16,16 @@ export default function About() {
             <Button
               variant="outlined"
               color="primary"
-              style={{ borderRadius: '50px', fontFamily: 'Chivo' }}
+              style={{ borderRadius: '50px'}}
               className="about-button1"
             >
               About us
             </Button>
-            <h2 className="about-heading" style={{ fontFamily: 'Chivo' }}>
+            <h2 className="about-heading" >
               Empowering health through innovation. Experts in medical care, research, and patient
               well-being.
             </h2>
-            <p className="about-text" style={{ fontFamily: 'Chivo' }}>
+            <p className="about-text" >
               Our Clinic has grown to provide a world-class facility for the treatment of tooth loss,
               bore advanced restorative dentistry. We are among the most qualified implant providers in
               the USA with over 35 years of quality training and experience.
@@ -35,9 +36,8 @@ export default function About() {
                 borderRadius: '50px',
                 color: 'black',
                 border: '1px solid black',
-                fontFamily: 'Chivo',
               }}
-              endIcon={<ChevronRightIcon />}
+              endIcon={<FontAwesomeIcon icon={faChevronRight} style={{fontSize:15}} />}
               className="about-button2"
             >
               Learn More
@@ -54,7 +54,7 @@ export default function About() {
         </Grid>
       </Grid>
 
-      <hr className="divider" />
+      <hr className="about-divider" />
     </Box>
   );
 }

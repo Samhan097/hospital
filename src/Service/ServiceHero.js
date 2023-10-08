@@ -47,6 +47,7 @@ get in touch             </Button>
       </Grid>
     </Grid>
   </Container>
+  <hr className="getintouch-divider" /> 
       </div>
     </div>
   );

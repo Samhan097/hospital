@@ -4,9 +4,10 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import "../../App.css";
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
-export default function Blog({ imageSrc, title, date }) {
+export default function Blog({ imageSrc, title,description, date }) {
 
   return (
     <Box className="blog-section" style={{ backgroundColor: "#f0f0f0" }}>
@@ -29,8 +30,9 @@ export default function Blog({ imageSrc, title, date }) {
               <h2 variant="h3" gutterBottom className='blog-heading'>
                 {title} {/* Use the title from props */}
               </h2>
+              <p>{description}</p>
 
-              <Grid container spacing={2} style={{marginTop:130}}>
+              <Grid container spacing={2} style={{marginTop:100}}>
                 {/* Button column */}
                 <Grid item >
                   <Button variant="outlined" style={{ borderRadius: '50px', color: 'black', border: '1px solid black' }}>
@@ -49,7 +51,7 @@ export default function Blog({ imageSrc, title, date }) {
           </div>
         </Grid>
         <Grid item xs={12} md={1} className="chevron-icon">
-          <ChevronRightIcon style={{ fontSize: 40, marginTop: 150 }} />
+          <FontAwesomeIcon icon={faChevronRight} style={{ fontSize: 30, marginTop: 150 }} />
         </Grid>
       </Grid>
     </Box>

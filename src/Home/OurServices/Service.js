@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Grid from "@mui/material/Grid";
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import "../../App.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 
 export default function Service() {
@@ -27,8 +28,7 @@ export default function Service() {
                 child imunizations
               </h3>
             <div>
-            <ChevronRightIcon style={{fontSize:50}} />
-            
+            <FontAwesomeIcon icon={faChevronRight} style={{fontSize:30,marginRight:30}} />
             </div>
           </div>
           <hr class="service-divider"></hr>
@@ -41,7 +41,7 @@ export default function Service() {
                 Mother and baby <br></br>imunization
               </h3>
             <div>
-            <ChevronRightIcon style={{fontSize:50}} />
+            <FontAwesomeIcon icon={faChevronRight} style={{fontSize:30,marginRight:30}} />
 
             </div>
           </div>
@@ -57,8 +57,7 @@ export default function Service() {
               </h3>
 
             <div>
-            <ChevronRightIcon style={{fontSize:50}} />
-
+            <FontAwesomeIcon icon={faChevronRight} style={{fontSize:30,marginRight:30}} />
             </div>
             {showImage && (
         <div className="hover-image">
@@ -75,8 +74,7 @@ export default function Service() {
               joint injections
               </h3>
             <div>
-            <ChevronRightIcon style={{fontSize:50}} />
-
+            <FontAwesomeIcon icon={faChevronRight} style={{fontSize:30,marginRight:30}} />
             </div>
           </div>
           <hr class="service-divider"></hr>
@@ -87,8 +85,7 @@ export default function Service() {
               minor surgery clinics
               </h3>
             <div>
-            <ChevronRightIcon style={{fontSize:50}} />
-
+            <FontAwesomeIcon icon={faChevronRight} style={{fontSize:30,marginRight:30}} />
             </div>
           </div>
 
