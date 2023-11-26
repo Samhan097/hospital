@@ -6,7 +6,7 @@ import { ArrowOutward } from "@mui/icons-material";
 function GetInTouch() {
   return (
     <>
-    <div><Container>
+    <div><Container className="getin-touch">
     <Grid container spacing={1}>
       <Grid item md={6} xs={12}>
         <h2 className="service-hero-heading-1">Personalized<br/> Healthcare only <br/>extraordinary<br/> Solutions.</h2>
@@ -17,13 +17,12 @@ function GetInTouch() {
 <br/>
 We understand that every patient is unique and offer personalized healthcare solutions tailored to your individual needs. </p>
 <Button variant="outlined" style={{ borderRadius: '50px', color:'black',border:'1px solid black' }} className="service-hero-button" endIcon={<ArrowOutward />}> 
-get in              </Button>
+get in touch             </Button>
       </Grid>
     </Grid>
   </Container>
   </div>
   <hr className="getintouch-divider" /> 
-  <h2>fefe</h2>
 </>
   )
 }

@@ -9,15 +9,14 @@ import MainMenu from "./Frame/MainMenu";
 import About from "./Home/About";
 import ImageSlider from "./Home/Slider/ImageSlider";
 import { SliderData } from "./Home/Slider/SliderData";
-import Footer from "./Home/Footer/Footer";
+import Footer from "./Footer/Footer";
 import OurServices from "./Home/OurServices/OurServices";
 import FAQ from "./Home/FAQ/FAQ";
 import Service from "./Service/Service";
 
-
 function App() {
   return (
-    <Router >
+    <Router>
       <div className="app">
         {/* Set up routes with Routes */}
         <Routes>
@@ -27,7 +26,9 @@ function App() {
             element={
               // Use 'element' instead of 'component'
               <>
-                <ButtonAppBar style={{backgroundColor: 'rgba(0, 0, 0, 0.5)'}} />
+                <ButtonAppBar
+                  style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
+                />
                 <ImageSlider slides={SliderData} />
                 <About />
                 <OurServices />
@@ -36,12 +37,19 @@ function App() {
                 <OurBlogs />
                 <FAQ />
                 <Footer />
-              </> 
+              </>
             }
           />
-          <Route path="/MainMenu" element={ <MainMenu />} />
-          <Route path="/Services" element={<Service />} />
-
+          <Route path="/MainMenu" element={<MainMenu />} />
+          <Route
+            path="/Services"
+            element={
+              <>
+                <Service />
+                {/* <OurServices /> */}
+              </>
+            }
+          />
         </Routes>
       </div>
     </Router>

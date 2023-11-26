@@ -8,7 +8,7 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function FAQ() {
   return (
-    <section className="our-faq" style={{marginLeft:30}}>
+    <section className="our-faq" style={{marginLeft:30,marginBottom:100}}>
     <div >
     <Button variant="outlined" color="primary" style={{ borderRadius: '50px' }} className="faq-button1">
                 faq
