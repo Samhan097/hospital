@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import "../Service.css";
 import { Box, Grid } from '@mui/material';
 import ServiceList from './ServiceList';
+import { Link } from 'react-router-dom';
 
 export default function OurServices() {
   return (
@@ -18,20 +19,19 @@ export default function OurServices() {
         >
           <div className="service-content-row">
             <div className="service-content-left">
-              <Button
-                variant="outlined"
-                color="primary"
-                style={{
-                  borderRadius: "50px",
-                  marginTop: 10,
-                }}
-                className="service-button1"
-              >
-                Our services
-              </Button>
+            <Link to="/Servicedetail">
+      <Button
+        variant="outlined"
+        color="primary"
+        style={{ borderRadius: '50px' }}
+        className="service-button1"
+      >
+        Our Services
+      </Button>
+    </Link>
             </div>
           </div>
-        </Grid>
+        </Grid> 
         {/*content 2 */}
         <Grid item xs={12} md={7}>
         <h2

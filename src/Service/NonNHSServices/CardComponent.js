@@ -15,14 +15,25 @@ const CardComponent = ({ image, title, description, buttons }) => {
         alt={title}
       />
       <CardContent>
-        <Typography variant="h6">{title}</Typography>
-        <Typography variant="body2">{description}</Typography>
+        <Typography variant="h4" style={{marginTop:20}}>{title}</Typography>
+        <Typography variant="body1" style={{fontSize:20}}>{description}</Typography>
       </CardContent>
       <CardActions>
         {buttons.map((button, idx) => (
-          <Button key={idx} color="primary" variant="outlined" onClick={button.onClick}>
-            {button.label}
-          </Button>
+          <Button
+  key={idx}
+  style={{
+    backgroundColor: '#E0E0E0',
+    color: '#121212',
+    borderRadius: '50px', // Adjust the border-radius as needed
+    padding: '0px 10px', // Adjust padding as needed
+  }}
+  variant="contained" // Use "contained" for a filled button
+  onClick={button.onClick}
+>
+  {button.label}
+</Button>
+
         ))}
       </CardActions>
     </Grid>

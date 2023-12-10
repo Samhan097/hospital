@@ -9,10 +9,10 @@ body{
   font-family: 'Cabinet Grotesk', sans-serif;
                                                 
 }
-p{
+/* p{
   font-family: 'Poppins', sans-serif;
-}
-h1{
+} */
+h1,p{
   font-family: 'Cabinet Grotesk', sans-serif;
                                                 
 }
@@ -272,6 +272,10 @@ h1{
   justify-content: center;
   margin-right: 16px;
 }
+.service-number {
+  margin-right: 0;
+  margin-bottom: 8px;
+}
 
 .service-text {
   flex: 1;
@@ -317,10 +321,7 @@ h1{
     align-items: center;
   }
 
-  .service-number {
-    margin-right: 0;
-    margin-bottom: 8px;
-  }
+  
 
   .service-text {
     text-align: left;

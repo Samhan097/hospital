@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="footer">
     <div className="footer-logo" style={{marginTop:70,marginBottom:70}}>
-            <img src="home/logo.png" alt="Logo" width="40" height="40" />
+            <img src="/home/logo.png" alt="Logo" width="40" height="40" />
             <h5  className="footer-logo-text">
               HOSPITAL
             </h5>

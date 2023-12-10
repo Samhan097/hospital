@@ -1,0 +1,71 @@
+.blogs-listing-hero-box{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #1F60B4;
+}
+.blogs-listing-content{
+    position: absolute;
+    top: 70%;
+    left: 4%; /* Adjust the left gap as needed */
+    transform: translateY(-50%);
+    text-align: left; /* Adjust text alignment as needed */
+    color: #fff;
+    z-index: 1;
+    max-width: 80%;
+}
+.blogs-listing-hero-heading{
+    
+    font-size: 80px;
+    line-height:90%;
+    margin-bottom: 10px; 
+}
+.blogs-listing-hero-paragraph{
+    font-size: 20px;
+    margin-top: 50px;
+}
+.number-of-blogs {
+    width: 40px;
+    height: 25px;
+    color: #fff;
+    border-radius: 40px;
+    border: 1px solid white;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    /* Padding to move the text inside the circle */
+    padding-left: 1px;
+    padding-right: 1px;
+    /* Adjust vertical alignment */
+    line-height: 25px; /* Set line-height equal to height */
+  }
+  .blogs-listing-hero-paragraph-light{
+    font-size: 20px;
+    margin-top: -10px;
+    color: #FFFFFF50;
+  }
+.number-of-blogs-light{
+    width: 40px;
+    height: 25px;
+    color: #FFFFFF50;
+    border-radius: 40px;
+    border: 1px solid #FFFFFF50;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    /* Padding to move the text inside the circle */
+    padding-left: 1px;
+    padding-right: 1px;
+    /* Adjust vertical alignment */
+    line-height: 25px; /* Set line-height equal to height */
+}
+.blog-button{
+    /* margin-top: 80px !important; */
+    padding-left: 20px;
+    
+  }

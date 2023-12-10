@@ -5,6 +5,7 @@ import Grid from "@mui/material/Grid";
 import "../../App.css";
 import Blog from "./Blog";
 import { ArrowOutward } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 export default function OurBlogs() {
   return (
@@ -20,6 +21,7 @@ export default function OurBlogs() {
         >
           <div className="blogs-content-row">
             <div className="blogs-content-left">
+          <Link to="Blogslisting" >
               <Button
                 variant="outlined"
                 color="primary"
@@ -33,6 +35,8 @@ export default function OurBlogs() {
               >
                 Our Blogs
               </Button>
+    </Link>
+
             </div>
           </div>
         </Grid>

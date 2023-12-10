@@ -39,10 +39,10 @@ export default function ButtonAppBar() {
     </Hidden>
     <Hidden smDown>
         <div className="logo" style={{ marginLeft: 30 ,marginRight:'auto'}}>
-          <img src="home/logo.png" alt="Logo" width="40" height="40" />
+          <img src="/home/logo.png" alt="Logo" width="40" height="40" />
           <Typography variant="h6" component="div" className="logo-text">
-            HOSPITAL
-          </Typography>
+            HOSPITAL 
+          </Typography> 
         </div>
         </Hidden>
     <Hidden smDown>

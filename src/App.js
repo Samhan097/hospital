@@ -13,6 +13,8 @@ import Footer from "./Footer/Footer";
 import OurServices from "./Home/OurServices/OurServices";
 import FAQ from "./Home/FAQ/FAQ";
 import Service from "./Service/Service";
+import ServiceDetail from "./Service Detail/ServiceDetail";
+import BlogsListing from "./Blogs Listing/BlogsListing";
 
 function App() {
   return (
@@ -48,6 +50,22 @@ function App() {
                 <Service />
                 {/* <OurServices /> */}
               </>
+            }
+          />
+          <Route
+            path="/Servicedetail"
+            element={
+              <>
+                <ServiceDetail />
+              </>
+            }
+          />
+          <Route
+            path="/Blogslisting"
+            element={
+              <>
+                <BlogsListing  />
+                </>
             }
           />
         </Routes>

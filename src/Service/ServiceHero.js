@@ -1,9 +1,7 @@
 import React from "react";
-import {Button, Container, Divider, Grid } from "@mui/material";
+import { Container, Divider, Grid } from "@mui/material";
 import "../Service/Service.css";
 import ServiceImageSlider from "./ServiceImageSlider";
-import { ArrowOutward } from "@mui/icons-material";
-import OurServices from "./OurServices/OurServices";
 
 
 const ServiceHero = () => {

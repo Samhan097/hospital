@@ -11,7 +11,7 @@ export default function OurServices() {
     <section className="our-services" style={{marginLeft:30}}>
     <div >
 
-    <Link to="/services">
+    <Link to="/Services">
       <Button
         variant="outlined"
         color="primary"
